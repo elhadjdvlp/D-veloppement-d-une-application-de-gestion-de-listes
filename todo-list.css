@@ -1,0 +1,235 @@
+
+/* Base */
+:root {
+    --primary-color: #333;
+    --light-color: #f8f8ff;
+    
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: linear-gradient(120deg, orange, cyan);
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+    padding: 32px;
+    height: 100vh;
+}
+
+/* App container grid */
+
+.app {
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+
+}
+
+/* Utilities */
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    display: inline-block;
+    padding: 12.50px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+/* Header */
+
+.header {
+    color: var(--primary-color);
+    padding: 1.6rem;
+    position: sticky;
+    top: 0;
+    
+}
+
+.header-titre {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.currently-viewing {
+    font-size: 1.5rem;
+}
+
+.currently-viewing > span {
+    font-weight: bold;
+    color: #e57373;
+    cursor: pointer;
+}
+
+/* Sidebar Form */
+
+.menu-form .form-control {
+    margin: 10px 0;
+}
+
+.menu-form input {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;  
+    box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.8);
+    border-radius: 5px;
+    
+}
+
+.menu-form input:focus {
+    outline: none;
+}
+
+.menu-form button {
+    width: 100%;
+}
+/* Sidebar List */
+.menu-list {
+    padding: 1.6rem;
+}
+
+.menu-item {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin: 16px 0;
+    cursor: pointer;
+    font-size: 1.75rem;
+}
+
+.menu-item.active {
+    font-weight: bold;
+}
+
+.menu-item:first-child {
+    margin-top: 0;
+}
+
+.menu-color {
+    border: none;
+    width: 25px;
+    margin-left: auto;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* Main */
+.main {
+    background-color: transparent;
+    overflow-y: scroll;
+    box-shadow: 2px 4px 15px hsla(0, 0%, 0%, 0.8);
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.main .header {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+/* Create and Edit Form */
+
+.create-tâche-form input, .edit-tâche-form input,
+.create-tâche-form select, .edit-tâche-form select {
+    border: 0;
+    width: 100%;
+    padding: 3px 0;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.create-tâche-form input:focus, .edit-tâche-form input:focus,
+.create-tâche-form select:focus, .edit-tâche-form select:focus {
+    outline: none;
+}
+
+.create-tâche-form, .edit-tâche-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: .8;
+}
+
+.create-tâche-form input, .edit-tâche-form input {
+    border-bottom: 1px solid black;
+    width: 350px;
+}
+
+.edit-tâche-form {
+    display: none;
+}
+
+/* Cards */
+.tâche-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+    grid-auto-rows: max-content;
+    gap: 20px;
+    padding: 1.6rem;
+}
+
+.tâche {
+    background-color: wheat;
+    color: var(--primary-color);
+    border-top: 6px solid;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tâche-tag {
+    font-size: 1.6rem;
+    padding: .5rem 2.5rem;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+.tâche-description {
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem 0;
+    word-break: break-all;
+}
+
+.tâche-actions {
+    margin-top: auto;
+}
+
+.tâche-actions i {
+    font-size: 1.6rem;
+    margin-right: 1.6rem;
+    opacity: 0.8;
+    cursor: pointer;
+    
+}

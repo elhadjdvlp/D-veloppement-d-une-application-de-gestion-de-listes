@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="todo-list.css">
+  
+    <title>Gestionnaire de tâche</title>
+
+</head>
+
+<body>
+    <div class="app">
+        <aside class="Menu">
+            <header class="header">
+                <h1 class="header-titre"> Ma liste de tâche
+                    <i class="fas fa-clipboard-check"></i>
+                </h1>
+                <form class="menu-form" data-new-liste > 
+                    <div class="form-control">
+                        <input type="text" placeholder="Ajouter une nouvelle liste" data-new-liste-input>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fa-solid fa-square-plus"> Ajouter une liste </i> 
+                    </button>
+                </form>
+            </header>
+            <ul class="menu-list" data-listes >
+                <li class="menu-item"> Ma liste</li>
+                <li class="menu-item"> 
+                    Voyage 
+                    <input type="color" class="menu-color">
+                </li>
+                <li class="menu-item"> 
+                    Medecin  
+                    <input type="color" class="menu-color">
+                </li>
+            </ul>
+        </aside>
+                    
+        <main class="main">
+            <header class="header">
+                <div>
+                    <h1 class="hader-titre"> Gestionnaire de liste de tâche</h1>
+                    <div class="currently-viewing" data-currently-viewing> Vous consultez toutes vos tâches.
+                    </div>
+                </div>
+                    
+                <!-- create tâche form -->
+                <form class="create-tâche-form" data-new-tâche-form>
+                    <div class="form-control">
+                        <select data-new-tâche-select required>
+                            <option value=""> Mes tâches </option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-new-tâche-input placeholder="Ajouter une nouvelle tâche" required> 
+                    </div>
+                    <button class=" btn btn-primary">
+                        <i class="fa fa-plus-square" aria-hidden ="true"></i> Ajouter une tâche
+                    </button>
+
+                </form>
+                <!-- Edit tâche form -->
+                <form class="edit-tâche-form" data-edit-tâche-form>
+                    <div class="form-control">
+                        <select data-edit-tâche-select required>
+                            <option value=""> Ma liste </option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-edit-tâche-input placeholder="Ajouter une nouvelle tâche" required> 
+                    </div>
+                    <button class=" btn btn-primary">
+                        Enregistrer
+                    </button>
+
+                </form>
+                
+            </header>
+            <section class="tâche-container" data-notes>
+                <div class="tâche" style="border-color: black;">
+                    <div class="tâche-tag" style="background-color: rgb(128, 128, 128); color: black;">
+                        Voyage 
+                    </div>
+                    <p class="tâche-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Reiciendis officia dolores asperiores corrupti veritatis.
+                    </p>
+                    <div class="tâche-actions">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <div class="tâche" style="border-color: black;">
+                    <div class="tâche-tag" style="background-color: grey;">
+                        Voyage 
+                    </div>
+                    <p class="tâche-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Reiciendis officia dolores asperiores corrupti veritatis.
+                    </p>
+                    <div class="tâche-actions">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <div class="tâche" style="border-color: black;">
+                    <div class="tâche-tag" style="background-color: grey;">
+                        Voyage 
+                    </div>
+                    <p class="tâche-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Reiciendis officia dolores asperiores corrupti veritatis.
+                    </p>
+                    <div class="tâche-actions">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+                <div class="tâche" style="border-color: black;">
+                    <div class="tâche-tag" style="background-color: grey;">
+                        Voyage 
+                    </div>
+                    <p class="tâche-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Reiciendis officia dolores asperiores corrupti veritatis.
+                    </p>
+                    <div class="tâche-actions">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="./todo-list.js"></script>
+
+</body>
+</html>
