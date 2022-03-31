@@ -118,11 +118,7 @@ tâchesContainer.addEventListener('click', (e) => {
 // EVENT: Get Selected liste Id
 listesContainer.addEventListener('click', (e) => {
     if (e.target.tagName.toLowerCase() == 'li') {
-        if (!e.target.dataset.listesId) {
-            selectedListeId = null;
-        } else {
-            selectedListeId = e.target.dataset.listesId;
-        }
+        selectedListeId = !e.target.dataset.listesId ? null : e.target.dataset.listesId;
         saveAndRender();
     }
 
